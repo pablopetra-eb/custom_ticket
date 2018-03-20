@@ -26,7 +26,7 @@ SECRET_KEY = 't6id7sj_w*wt%bu+wc!g-4&(q4_9hp6-mwn+zp)5aota3n0)g+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com']
 
 
 def get_env_variable(var_name):
@@ -112,8 +112,19 @@ SOCIAL_AUTH_EVENTBRITE_SECRET = get_env_variable('SOCIAL_AUTH_EVENTBRITE_SECRET'
 WSGI_APPLICATION = 'custom_ticket.wsgi.application'
 
 
-# Database
+
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'djangogirls',
+#         'USER': 'name',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 DATABASES = {
     'default': {
@@ -122,8 +133,7 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -162,3 +172,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
