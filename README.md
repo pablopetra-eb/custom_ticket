@@ -17,6 +17,6 @@ $ python manage.py runserver
 
 ```
 
-
 >// login with Eventbrite
+
 http://localhost:8000/accounts/login/?next=/events/
