@@ -4,11 +4,19 @@ As an organizer I want to be able to set a default template for both email and p
 
 # Getting Started
 
-// install requeriments for enviorement
-pip install -r requeriments.txt
+>// install requeriments for enviorement
 
-// run local server
-python manage.py runserver
+```python
+$ pip install -r requeriments.txt
 
-// login with Eventbrite
+```
+
+>// run local server
+```python
+$ python manage.py runserver
+
+```
+
+>// login with Eventbrite
+
 http://localhost:8000/accounts/login/?next=/events/
