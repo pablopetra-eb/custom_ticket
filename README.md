@@ -4,19 +4,23 @@ As an organizer I want to be able to set a default template for both email and p
 
 # Getting Started
 
->// install requeriments for enviorement
+> install requeriments for enviorement
 
 ```python
 $ pip install -r requeriments.txt
 
 ```
 
->// run local server
+> run local server
 ```python
 $ python manage.py runserver
 
 ```
 
->// login with Eventbrite
+> login with Eventbrite
 
 http://localhost:8000/accounts/login/?next=/events/
+
+> Heroku app
+
+https://custom-ticket-heroku.herokuapp.com/events/
