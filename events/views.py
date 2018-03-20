@@ -17,7 +17,6 @@ class EventsView(TemplateView, LoginRequiredMixin):
         context = super(EventsView, self).get_context_data(**kwargs)
         access_token = self.request.user.social_auth.all()[0].access_token
         eventbrite = Eventbrite(access_token)
-        # import ipdb; ipdb.set_trace()
         context['events'] = [
             event['name']['html']
             for event in eventbrite.get('/users/me/events/')['events']
