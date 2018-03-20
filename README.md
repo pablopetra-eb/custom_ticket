@@ -1,2 +1,14 @@
-# custom_ticket
-Custom Ticket
+# Custom ticket Django App
+
+As an organizer I want to be able to set a default template for both email and pdf ticket that will be automatically applied to any event created on my account.
+
+# Getting Started
+
+// install requeriments for enviorement
+pip install -r requeriments.txt
+
+// run local server
+python manage.py runserver
+
+// login with Eventbrite
+http://localhost:8000/accounts/login/?next=/events/
