@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
-from eventbrite import Eventbrite
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.base import TemplateView
 from django.utils.decorators import method_decorator
+
+from eventbrite import Eventbrite
 
 
 @method_decorator(login_required, name='dispatch')

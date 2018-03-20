@@ -1,9 +1,8 @@
 from django.conf.urls import url
-from . import views
-
+from .views import EventsView
 
 
 urlpatterns = [
-    url(r'^$', views.EventsView.as_view(), name='events'),
+    url(r'^$', EventsView.as_view(), name='events'),
 
 ]
